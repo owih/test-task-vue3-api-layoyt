@@ -1,0 +1,47 @@
+@import "fonts";
+@import "normalize.css";
+@import "variables";
+
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: OpenSans, 'sans-serif', 'Arial';
+}
+
+.container {
+  padding: 0 16px;
+  margin: 0 auto;
+  @media (min-width: $md) {
+    max-width: $md;
+  }
+  @media (min-width: $lg) {
+    max-width: $lg;
+  }
+  @media (min-width: $xl) {
+    max-width: $xl;
+  }
+}
+
+.link {
+  color: $dark;
+  text-decoration: none;
+  display: inline-block;
+  &:hover {
+    text-decoration: none;
+    color: $primary;
+  }
+  &.router-link-exact-active {
+    font-weight: bold;
+    color: $primary;
+  }
+}
+
+.section {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
